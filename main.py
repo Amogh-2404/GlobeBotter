@@ -14,6 +14,7 @@ from langchain.schema import ChatMessage
 from langchain_openai import ChatOpenAI
 import streamlit as st
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 class StreamHandler(BaseCallbackHandler):
@@ -29,7 +30,7 @@ st.set_page_config(page_title="GlobeBotter", page_icon="🌐")
 st.header(
     '🌐 Welcome to Globebotter, your travel assistant with Internet access. What are you planning for your next trip?')
 
-search = SerpAPIWrapper()
+search = SerpAPIWrapper(api_key=os.getenv('SERPAPI_API_KEY'))
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=1500,
     chunk_overlap=200
