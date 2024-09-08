@@ -30,7 +30,7 @@ st.set_page_config(page_title="GlobeBotter", page_icon="🌐")
 st.header(
     '🌐 Welcome to Globebotter, your travel assistant with Internet access. What are you planning for your next trip?')
 
-search = SerpAPIWrapper(serpapi_api_key=os.getenv('SERPAPI_API_KEY'))
+search = SerpAPIWrapper(serpapi_api_key="6834e9a83cba9c6f8edc20079355bbcfb38811d3ef09fd1a3714d584bccb11cd")
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=1500,
     chunk_overlap=200
